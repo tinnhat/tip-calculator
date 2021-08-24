@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+.main {
+  background-color: #c4e3e7;
+  width: 100%;
+  height: 100vh;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 80px;
+}
+.heading span {
+  display: block;
+}
+.box {
+  max-width: 800px;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: white;
+}
+.box-calculator {
+  padding: 40px;
+  display: flex;
+}
+.box-left {
+  width: 100%;
+  margin-right: 20px;
+}
+.box-right {
+  width: 100%;
+}
+.title {
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 10px;
+}
+.box-input {
+  position: relative;
+}
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: hsl(189, 41%, 97%);
+}
+.input:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.active-border {
+  border: 2px solid red !important;
+}
+.icon {
+  position: absolute;
+  width: 20px;
+  height: auto;
+  top: 12px;
+  left: 16px;
+  pointer-events: none;
+}
+.box-button {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  width: 33.33%;
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+}
+.col:first-child {
+  margin-left: 0;
+}
+.col:last-child {
+  margin-right: 0;
+}
+.btn-primary {
+  border: none;
+  margin: 6px 0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 4px;
+}
+.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+.disable {
+  background-color: hsl(171, 47%, 29%) !important;
+  color: rgb(39, 39, 39);
+  cursor: default !important;
+}
+
+.btn {
+  border: none;
+  margin: 6px 0;
+  padding: 10px;
+  text-align: center;
+  color: hsl(186, 14%, 43%);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.box-right {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+}
+.row {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip span {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  font-size: 12px;
+}
+.tip {
+  color: white;
+}
+.price {
+  color: hsl(172, 67%, 45%);
+  font-size: 40px;
+  font-weight: 700;
+}
+.btn-reset {
+  margin: auto 20px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.box-right {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  font-size: 20px;
+  float: right;
+  clear: both;
+}
+#custom {
+  font-size: 20px;
+  /* margin-left: 10px; */
+  padding: 6px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 4px;
+}
+#custom:focus {
+  outline: none;
+  border: 1px solid hsl(172, 67%, 45%);
+}
+@media screen and (max-width: 767px) {
+  .heading {
+    padding: 10px 0;
+  }
+  .box-calculator {
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+  }
+  .box-right {
+    margin-top: 20px;
+    height: auto;
+  }
+  button.btn-reset {
+    margin-bottom: 20px;
+  }
+  .box-button {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin: 10px;
+  }
+  #custom {
+    margin-top: 12px;
+    padding: 6px 26px;
+  }
+  .title {
+    margin: 10px 0;
+  }
+}

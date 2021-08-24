@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="main">
+      <h6 class="heading">SPLI <span>TIER</span></h6>
+
+      <div class="box">
+        <div class="box-calculator">
+          <div class="box-left">
+            <p class="title">Bill</p>
+            <div class="box-input">
+              <img src="./images/icon-dollar.svg" alt="" class="icon" />
+              <input
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                class="input"
+                style="text-align: right; color: hsl(172, 67%, 45%)"
+                id="dollar"
+                required
+              />
+            </div>
+            <p class="title">Select Tip %</p>
+            <div class="box-button">
+              <div class="col">
+                <button class="btn-primary" id="nam">5%</button>
+                <button class="btn-primary" id="hainam">25%</button>
+              </div>
+              <div class="col">
+                <button class="btn-primary" id="muoi">10%</button>
+                <button class="btn-primary" id="nammuoi">50%</button>
+              </div>
+              <div class="col">
+                <button class="btn-primary mr-10" id="muoinam">15%</button>
+                <input
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                  class="input"
+                  style="text-align: right; color: hsl(172, 67%, 45%)"
+                  id="custom"
+                  min="1"
+                  max="100"
+                  required
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+            <p class="title">Number of People</p>
+            <div class="box-input">
+              <img src="./images/icon-person.svg" alt="" class="icon" />
+              <input
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                class="input"
+                style="text-align: right; color: hsl(172, 67%, 45%)"
+                id="number"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+          </div>
+          <div class="box-right">
+            <div class="row">
+              <p class="tip">Tip Amount <span> / person</span></p>
+              <p class="price">$0</p>
+            </div>
+            <div class="row">
+              <p class="tip">total <span> / person</span></p>
+              <p class="price">$0</p>
+            </div>
+            <button class="btn-reset disable">RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
